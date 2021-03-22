@@ -382,6 +382,7 @@ class _CalendarState<T extends EventInterface>
             localeDate: _localeDate,
           ),
           Flexible(
+            fit: FlexFit.tight,
               child: PageView.builder(
             itemCount:
                 widget.weekFormat ? this._weeks.length : this._dates.length,
