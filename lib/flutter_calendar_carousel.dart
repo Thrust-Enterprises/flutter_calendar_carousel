@@ -329,6 +329,7 @@ class _CalendarState<T extends EventInterface>
       width: widget.width,
       height: widget.height,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           CalendarHeader(
             showHeader: widget.showHeader,
