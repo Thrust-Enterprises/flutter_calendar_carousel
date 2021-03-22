@@ -381,7 +381,8 @@ class _CalendarState<T extends EventInterface>
             weekdayTextStyle: widget.weekdayTextStyle,
             localeDate: _localeDate,
           ),
-          PageView.builder(
+          Flexible(
+              child: PageView.builder(
             itemCount:
                 widget.weekFormat ? this._weeks.length : this._dates.length,
             physics: widget.isScrollable
@@ -396,7 +397,7 @@ class _CalendarState<T extends EventInterface>
               return widget.weekFormat ? weekBuilder(index) : builder(index);
             },
             pageSnapping: widget.pageSnapping,
-          ),
+          )),
         ],
       ),
     );
